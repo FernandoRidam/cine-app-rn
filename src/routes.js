@@ -11,6 +11,10 @@ import {
 
 import Icon from 'react-native-vector-icons/Feather';
 
+import {
+  useTranslation,
+} from 'react-i18next';
+
 const Tab = createBottomTabNavigator();
 
 import {
@@ -28,26 +32,30 @@ export default function Routes() {
     },
   };
 
+  const { t } = useTranslation();
+
   return (
     <NavigationContainer theme={ MyTheme }>
       <Tab.Navigator
         initialRouteName="Films"
         tabBarOptions={{
           activeTintColor: '#FFC527',
-          inactiveTintColor: '#999',
+          inactiveTintColor: '#FFF',
           labelStyle: {
             fontWeight: 'bold',
             fontSize: 14,
           },
 
           style: {
+            height: 65,
+            paddingVertical: 5,
             backgroundColor: '#020916',
           },
         }}
       >
         <Tab.Screen
           options={{
-            tabBarLabel: 'Filmes',
+            tabBarLabel: t('tab.films'),
             tabBarIcon: ({ color, size }) => <Icon name="play" size={ size } color={ color } />
           }}
           name="Films"
@@ -56,7 +64,7 @@ export default function Routes() {
 
         <Tab.Screen
           options={{
-            tabBarLabel: 'Séries',
+            tabBarLabel: t('tab.series'),
             tabBarIcon: ({ color, size }) => <Icon name="list" size={ size } color={ color } />
           }}
           name="Series"
@@ -65,7 +73,7 @@ export default function Routes() {
 
         <Tab.Screen
           options={{
-            tabBarLabel: 'Configurações',
+            tabBarLabel: t('tab.settings'),
             tabBarIcon: ({ color, size }) => <Icon name="settings" size={ size } color={ color } />
           }}
           name="Settings"
