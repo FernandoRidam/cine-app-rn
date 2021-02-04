@@ -7,7 +7,7 @@ import {
 
 import Styles from './styles';
 
-export function Main() {
+export function Settings() {
   return (
     <KeyboardAvoidingView
       style={ Styles.container }
