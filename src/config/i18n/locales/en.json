@@ -1,0 +1,23 @@
+{
+  "translation": {
+    "tab": {
+      "films": "Films",
+      "series": "Series",
+      "settings": "Settings"
+    },
+
+    "screens": {
+      "films": {},
+
+      "series": {},
+
+      "settings": {
+        "language": "Language",
+        "languages": {
+          "pt": "Brazilian Portuguese",
+          "en": "English"
+        }
+      }
+    }
+  }
+}
