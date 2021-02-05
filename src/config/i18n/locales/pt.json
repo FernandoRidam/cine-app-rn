@@ -7,7 +7,13 @@
     },
 
     "screens": {
-      "films": {},
+      "films": {
+        "trend": "Tendências",
+        "genre": "Gêneros",
+        "search": "O que você está procurando?",
+        "title": "Resultado da pesquisa",
+        "empty": "Nenhum filme encontrado!"
+      },
 
       "series": {},
 
@@ -17,6 +23,12 @@
           "pt": "Português do Brasil",
           "en": "Inglês"
         }
+      }
+    },
+
+    "components": {
+      "loading": {
+        "wait": "Aguarde..."
       }
     }
   }

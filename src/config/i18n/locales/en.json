@@ -7,7 +7,13 @@
     },
 
     "screens": {
-      "films": {},
+      "films": {
+        "trend": "Tendencies",
+        "genre": "Genres",
+        "search": "What are you looking for?",
+        "title": "Search Result",
+        "empty": "No movies found!"
+      },
 
       "series": {},
 
@@ -17,6 +23,12 @@
           "pt": "Brazilian Portuguese",
           "en": "English"
         }
+      }
+    },
+
+    "components": {
+      "loading": {
+        "wait": "Wait..."
       }
     }
   }
