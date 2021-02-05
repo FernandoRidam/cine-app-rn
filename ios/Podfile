@@ -12,6 +12,8 @@ target 'cineapp' do
 
   pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
 
+  pod 'RNCMaskedView', :path => '../node_modules/@react-native-community/masked-view'
+
   target 'cineappTests' do
     inherit! :complete
     # Pods for testing

@@ -10,12 +10,18 @@
       "films": {
         "trend": "Tendências",
         "genre": "Gêneros",
-        "search": "O que você está procurando?",
-        "title": "Resultado da pesquisa",
+        "search": "Qual filme você está procurando?",
+        "title": "Filmes encontrados",
         "empty": "Nenhum filme encontrado!"
       },
 
-      "series": {},
+      "series": {
+        "trend": "Tendências",
+        "genre": "Gêneros",
+        "search": "Que série está procurando?",
+        "title": "Séries encontradas",
+        "empty": "Nenhuma série encontrada!"
+      },
 
       "settings": {
         "language": "Linguagem",

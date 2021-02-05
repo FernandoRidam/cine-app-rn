@@ -10,12 +10,18 @@
       "films": {
         "trend": "Tendencies",
         "genre": "Genres",
-        "search": "What are you looking for?",
-        "title": "Search Result",
+        "search": "What movie are you looking for?",
+        "title": "Movies found",
         "empty": "No movies found!"
       },
 
-      "series": {},
+      "series": {
+        "trend": "Tendencies",
+        "genre": "Genres",
+        "search": "What series are you looking for?",
+        "title": "Series found",
+        "empty": "No series found!"
+      },
 
       "settings": {
         "language": "Language",

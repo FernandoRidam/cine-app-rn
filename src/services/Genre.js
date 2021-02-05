@@ -5,3 +5,9 @@ export async function getMovieGenres() {
 
   return { genres: data.genres };
 };
+
+export async function getSeriesGenres() {
+  const { data } = await api.get('/genre/tv/list');
+
+  return { genres: data.genres };
+};
