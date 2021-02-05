@@ -1,6 +1,6 @@
 import api from '../config/api';
 
-export async function getTrendings() {
+export async function getTrendingsFilms() {
   const { data } = await api.get('/trending/movie/week');
 
   return { films: data.results };
@@ -23,5 +23,5 @@ export async function getFilmsByGenre( genre ) {
     },
   });
 
-  return { films: data.results }
+  return { films: data.results };
 };

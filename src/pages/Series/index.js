@@ -1,20 +1,9 @@
 import React from 'react';
 
-import {
-  KeyboardAvoidingView,
-  Platform,
-} from 'react-native';
-
-import Styles from './styles';
+import { Home } from '../Home';
 
 export function Series() {
   return (
-    <KeyboardAvoidingView
-      style={ Styles.container }
-      behavior="padding"
-      enabled={ Platform.OS === 'ios' }
-    >
-      {/*  */}
-    </KeyboardAvoidingView>
+    <Home type="series" />
   );
 };

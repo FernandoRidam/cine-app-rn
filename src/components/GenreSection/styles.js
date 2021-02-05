@@ -20,6 +20,19 @@ const Styles = StyleSheet.create({
     marginRight: 15,
     marginBottom: 15,
   },
+
+  skeleton: {
+    flexDirection: 'row',
+    width: '100%',
+  },
+
+  skeletonCard: {
+    width: 145,
+    height: 215,
+    borderRadius: 5,
+    marginRight: 15,
+    elevation: 1,
+  },
 });
 
 export default Styles;

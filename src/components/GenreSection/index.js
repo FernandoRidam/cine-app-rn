@@ -9,8 +9,11 @@ import {
   FlatList,
 } from 'react-native';
 
+import SkeletonPlaceholder from "react-native-skeleton-placeholder";
+
 import {
   getFilmsByGenre,
+  getSeriesByGenre,
 } from '../../services';
 
 import {
@@ -20,18 +23,30 @@ import { Separator } from '../Separator';
 
 import Styles from './styles';
 
-export function GenreSection({ genre }) {
-  const [ films, setFilms ] = useState([]);
+export function GenreSection({ type, genre }) {
+  const [ loading, setLoading ] = useState( false );
 
-  async function getFilms() {
-    const { films } = await getFilmsByGenre( genre.id );
+  const [ data, setData ] = useState([]);
 
-    setFilms( films );
+  async function getData() {
+    setLoading( true );
+
+    if( type === 'films') {
+      const { films } = await getFilmsByGenre( genre.id );
+
+      setData( films );
+    } else if( type === 'series') {
+      const { series } = await getSeriesByGenre( genre.id );
+
+      setData( series );
+    }
+
+    setLoading( false );
   };
 
   useEffect(() => {
-    getFilms();
-  }, [ genre ]);
+    getData();
+  }, [ genre, type ]);
 
   return (
     <View style={ Styles.genreContainer }>
@@ -41,12 +56,20 @@ export function GenreSection({ genre }) {
         <Separator />
       </View>
 
-      <FlatList
-        data={ films.slice( 0, 3 )}
-        keyExtractor={ item => item.id.toString()}
-        renderItem={({ item }) => <CardFilm film={ item }/>}
-        horizontal
-      />
+      {
+        loading
+          ?  <SkeletonPlaceholder style={ Styles.skeleton }>
+               <SkeletonPlaceholder.Item style={ Styles.skeletonCard }/>
+               <SkeletonPlaceholder.Item style={ Styles.skeletonCard }/>
+               <SkeletonPlaceholder.Item style={ Styles.skeletonCard }/>
+            </SkeletonPlaceholder>
+          : <FlatList
+              data={ data.slice( 0, 3 )} // slice para diminuir quantos filmes serão renderizados. Ao renderizar todos causava uma latencia muito grande nas animações.
+              keyExtractor={ item => item.id.toString()}
+              renderItem={({ item }) => <CardFilm item={ item }/>}
+              horizontal
+            />
+      }
     </View>
   );
 };

@@ -11,16 +11,16 @@ import LinearGradient from 'react-native-linear-gradient';
 
 import Styles from './styles';
 
-export function TrendingCard({ film }) {
+export function TrendingCard({ item }) {
   return (
     <View
-      key={ film.id }
+      key={ item.id }
       style={ Styles.card }
     >
       <ImageBackground
         style={ Styles.image }
         imageStyle={ Styles.image }
-        source={{ uri: `https://image.tmdb.org/t/p/w500${ film.backdrop_path }`}}
+        source={{ uri: `https://image.tmdb.org/t/p/w500${ item.backdrop_path }`}}
       >
         <LinearGradient
           style={ Styles.linearGradient }
@@ -28,11 +28,11 @@ export function TrendingCard({ film }) {
         >
           <Image
             style={ Styles.cover }
-            source={{ uri: `https://image.tmdb.org/t/p/w500${ film.poster_path }`}}
+            source={{ uri: `https://image.tmdb.org/t/p/w500${ item.poster_path }`}}
           />
 
           <View style={ Styles.info }>
-            <Text style={ Styles.title }>{ film.title }</Text>
+            <Text style={ Styles.title }>{ item.title || item.name }</Text>
           </View>
         </LinearGradient>
       </ImageBackground>
