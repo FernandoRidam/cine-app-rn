@@ -4,18 +4,18 @@
 
 Aplicativo de consulta e dicas de filmes. Suas principais funcionalidades são:
 
-1. Listar filmes em exibição nos cinemas.
-2. Busca de filmes por titulo.
-3. Listar filmes por genêro.
-4. Exibe detalhes dos filmes, com trailer.
+1. Listar filmes e séries lançamentos.
+2. Busca de filmes e séries por titulo.
+3. Listar filmes e séries por genêro.
+4. Exibe detalhes dos filmes e séries, com trailers.
 5. Com duas opções de idiomas. Português do Brasil e Inglês.
 
 ### Screens
 
 | <img src="/screens/films.png" width="200">
+| <img src="/screens/details.png" width="200">
 | <img src="/screens/series.png" width="200">
 | <img src="/screens/search.png" width="200">
-| <img src="/screens/details.png" width="200">
 | <img src="/screens/settings.png" width="200">
 
 ## Executando o projeto
