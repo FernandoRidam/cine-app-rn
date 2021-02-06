@@ -25,3 +25,9 @@ export async function getFilmsByGenre( genre ) {
 
   return { films: data.results };
 };
+
+export async function getFilmVideos( id ) {
+  const { data } = await api.get(`/movie/${ id }/videos`);
+
+  return { videos: data.results };
+};

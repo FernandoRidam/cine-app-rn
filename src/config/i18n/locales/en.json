@@ -6,6 +6,12 @@
       "settings": "Settings"
     },
 
+    "stack": {
+      "details": {
+        "title": "Details"
+      }
+    },
+
     "screens": {
       "films": {
         "trend": "Tendencies",
@@ -29,6 +35,13 @@
           "pt": "Brazilian Portuguese",
           "en": "English"
         }
+      },
+
+      "details": {
+        "average": "Average rating",
+        "assessments": "Assessments",
+        "empty": "No videos found",
+        "unavailable": "Video unavailable"
       }
     },
 

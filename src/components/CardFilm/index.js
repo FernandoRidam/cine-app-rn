@@ -7,15 +7,22 @@ import {
   View,
 } from 'react-native';
 
+import {
+  useNavigation,
+} from '@react-navigation/native';
+
 import LinearGradient from 'react-native-linear-gradient';
 
 import Styles from './styles';
 
-export function CardFilm({ item }) {
+export function CardFilm({ item, type }) {
+  const navigation = useNavigation();
+
   return (
     <TouchableOpacity
       activeOpacity={ .8 }
       style={ Styles.card }
+      onPress={() => navigation.navigate('Details', { item: { ...item, type }})}
     >
       <ImageBackground
         source={{ uri: `https://image.tmdb.org/t/p/w500${ item.poster_path }`}}

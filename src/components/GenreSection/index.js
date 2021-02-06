@@ -9,8 +9,6 @@ import {
   FlatList,
 } from 'react-native';
 
-import SkeletonPlaceholder from "react-native-skeleton-placeholder";
-
 import {
   getFilmsByGenre,
   getSeriesByGenre,
@@ -19,18 +17,17 @@ import {
 import {
   CardFilm,
 } from '../CardFilm';
-import { Separator } from '../Separator';
+
+import {
+  Separator,
+} from '../Separator';
 
 import Styles from './styles';
 
 export function GenreSection({ type, genre }) {
-  const [ loading, setLoading ] = useState( false );
-
   const [ data, setData ] = useState([]);
 
   async function getData() {
-    setLoading( true );
-
     if( type === 'films') {
       const { films } = await getFilmsByGenre( genre.id );
 
@@ -40,8 +37,6 @@ export function GenreSection({ type, genre }) {
 
       setData( series );
     }
-
-    setLoading( false );
   };
 
   useEffect(() => {
@@ -56,20 +51,12 @@ export function GenreSection({ type, genre }) {
         <Separator />
       </View>
 
-      {
-        loading
-          ?  <SkeletonPlaceholder style={ Styles.skeleton }>
-               <SkeletonPlaceholder.Item style={ Styles.skeletonCard }/>
-               <SkeletonPlaceholder.Item style={ Styles.skeletonCard }/>
-               <SkeletonPlaceholder.Item style={ Styles.skeletonCard }/>
-            </SkeletonPlaceholder>
-          : <FlatList
-              data={ data.slice( 0, 3 )} // slice para diminuir quantos filmes serão renderizados. Ao renderizar todos causava uma latencia muito grande nas animações.
-              keyExtractor={ item => item.id.toString()}
-              renderItem={({ item }) => <CardFilm item={ item }/>}
-              horizontal
-            />
-      }
+      <FlatList
+        data={ data.slice( 0, 3 )} // slice para diminuir quantos filmes serão renderizados. Ao renderizar todos causava uma latencia muito grande nas animações.
+        keyExtractor={ item => item.id.toString()}
+        renderItem={({ item }) => <CardFilm type={ type } item={ item }/>}
+        horizontal
+      />
     </View>
   );
 };
