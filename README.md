@@ -1,6 +1,4 @@
-# Cine App
-
-<img src="/src/assets/icon.png" height="30">
+# Cine App <img src="/src/assets/icon.png" height="55">
 
 Aplicativo de consulta e dicas de filmes. Suas principais funcionalidades são:
 
