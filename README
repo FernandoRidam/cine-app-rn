@@ -10,11 +10,11 @@ Aplicativo de consulta e dicas de filmes. Suas principais funcionalidades são:
 
 ### Screens
 
-| <img src="/screens/films.png" width="200">
-| <img src="/screens/series.png" width="200">
-| <img src="/screens/search.png" width="200">
-| <img src="/screens/details.png" width="200">
-| <img src="/screens/settings.png" width="200">
+| ![]("/screens/films.png | width=200)
+| ![]("/screens/series.png | width=200)
+| ![]("/screens/search.png | width=200)
+| ![]("/screens/details.png | width=200)
+| ![]("/screens/settings.png | width=200)
 
 ## Executando o projeto
 
