@@ -1,6 +1,6 @@
 # Cine App
 
-![Logo](../master/src/assets/icon.png | height=30)
+<img src="/src/assets/icon.png" height="30">
 
 Aplicativo de consulta e dicas de filmes. Suas principais funcionalidades são:
 
@@ -12,11 +12,11 @@ Aplicativo de consulta e dicas de filmes. Suas principais funcionalidades são:
 
 ### Screens
 
-| ![Films](../master/screens/films.png | width=200)
-| ![Series](../master/screens/series.png | width=200)
-| ![Search Series](../master/screens/search.png | width=200)
-| ![Details](../master/screens/details.png | width=200)
-| ![Settings](../master/screens/settings.png | width=200)
+| <img src="/screens/films.png" width="200">
+| <img src="/screens/series.png" width="200">
+| <img src="/screens/search.png" width="200">
+| <img src="/screens/details.png" width="200">
+| <img src="/screens/settings.png" width="200">
 
 ## Executando o projeto
 
