@@ -6,6 +6,12 @@
       "settings": "Configurações"
     },
 
+    "stack": {
+      "details": {
+        "title": "Detalhes"
+      }
+    },
+
     "screens": {
       "films": {
         "trend": "Tendências",
@@ -29,6 +35,13 @@
           "pt": "Português do Brasil",
           "en": "Inglês"
         }
+      },
+
+      "details": {
+        "average": "Média de avaliação",
+        "assessments": "Avaliações",
+        "empty": "Nenhum vídeo encontrado",
+        "unavailable": "Vídeo indisponível"
       }
     },
 

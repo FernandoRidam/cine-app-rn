@@ -10,9 +10,10 @@ target 'cineapp' do
 
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
-  pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
 
   pod 'RNCMaskedView', :path => '../node_modules/@react-native-community/masked-view'
+
+  pod 'react-native-video', :path => '../node_modules/react-native-video'
 
   target 'cineappTests' do
     inherit! :complete

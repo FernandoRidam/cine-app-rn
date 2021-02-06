@@ -4,3 +4,4 @@ export * from './TrendingCard';
 export * from './GenreSection';
 export * from './Loading';
 export * from './CardFilm';
+export * from './VideoPlayer';
