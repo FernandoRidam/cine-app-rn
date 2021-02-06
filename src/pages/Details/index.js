@@ -58,7 +58,8 @@ export function Details({ route }) {
   };
 
   useEffect(() => {
-    getVideos();
+    if( item.id )
+      getVideos();
   }, [ item ]);
 
   return (

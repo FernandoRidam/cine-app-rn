@@ -8,6 +8,7 @@ const Styles = StyleSheet.create({
     height: 215,
     borderRadius: 5,
     marginRight: 15,
+    marginVertical: 5,
     elevation: 1,
   },
 
